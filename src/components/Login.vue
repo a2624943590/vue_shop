@@ -55,7 +55,7 @@ export default {
       this.$refs.loginFromRef.validate(async (valid) => {
         if (!valid) return
         const { data: res } = await this.$http.post('login', this.loginForm)
-        console.log(res)
+        // console.log(res)
         if (res.meta.status !== 200) return this.$message.error('登陆失败')
         this.$message.success('登陆成功')
 
@@ -73,6 +73,7 @@ export default {
  .login_container{
     background-color: #2c3e50;
     height: 100%;
+    //background-image: ;
  }
  .login_box{
     width: 450px;
