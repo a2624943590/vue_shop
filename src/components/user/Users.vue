@@ -144,9 +144,9 @@ export default {
         callback(new Error('请再次输入密码'))
       } else if (value !== this.addForm.password) {
         callback(new Error('两次输入密码不一致!'))
-        console.log(typeof (value))
-        console.log(this.addForm.password)
-        console.log(this.addForm.checkpass)
+        //  console.log(typeof (value))
+        // console.log(this.addForm.password)
+        // console.log(this.addForm.checkpass)
       } else {
         return callback()
       }
@@ -164,7 +164,7 @@ export default {
         return cb()
       }
       cb(new Error('请输入合法的手机号！'))
-      console.log(value)
+      // console.log(value)
     }
     return {
       queryInfo: {
@@ -238,7 +238,7 @@ export default {
       this.userlist = res.data.users
       this.total = res.data.total
       // console.log(res)
-      console.log(this.userlist)
+      // console.log(this.userlist)
     },
     handleSizeChange(newSize) {
       this.queryInfo.pagesize = newSize
@@ -269,7 +269,7 @@ export default {
     // 点击按钮添加用户
     adduser() {
       this.$refs.addFormRef.validate(async valited => {
-        console.log(valited)
+        // console.log(valited)
         if (!valited) return
         const { data: res } = await this.$http.post('users', {
           username: this.addForm.username,
@@ -326,7 +326,7 @@ export default {
         cancelButtonText: '取消',
         type: 'warning'
       }).catch(err => err)
-      console.log(confirmResult)
+      //  console.log(confirmResult)
       if (confirmResult !== 'confirm') {
         return this.$message.info('已取消了删除')
       }
@@ -341,7 +341,7 @@ export default {
     async setRoaleRights(userInfo) {
       this.editUsersRoles = true
       this.userInfo = userInfo
-      console.log(userInfo)
+      // console.log(userInfo)
 
       const { data: res } = await this.$http.get('roles')
       if (res.meta.status !== 200) {

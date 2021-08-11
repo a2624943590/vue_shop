@@ -222,7 +222,7 @@ export default {
     // tab页签点击函数的处理函数
     handleTabClick() {
       this.getParamsData()
-      console.log(this.activeName)
+      // console.log(this.activeName)
     },
     // 获取参数的列表数据
     async getParamsData() {
@@ -364,7 +364,7 @@ export default {
       // $nextTick方法的作用：当页面上的元素被重新渲染之后，才会执行回调函数中的代码
       this.$nextTick(_ => {
         this.$refs.saveTagInput.$refs.input.focus()
-        console.log(1111)
+        // console.log(1111)
       })
     },
     // 删除对应的参数可选项

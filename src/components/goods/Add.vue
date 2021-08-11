@@ -148,7 +148,7 @@ export default {
         return this.$message.error('获取商品分类数据失败！')
       }
       this.catelist = res.data
-      console.log(res.data)
+      // console.log(res.data)
     },
     handleChange() {
       // console.log(this.addForm.goods_cat);
@@ -195,7 +195,7 @@ export default {
     },
     // 处理图片预览效果
     handlePreview(file) {
-      console.log(file)
+      // console.log(file)
       this.previewPath = file.response.data.url
       this.previewVisible = true
     },

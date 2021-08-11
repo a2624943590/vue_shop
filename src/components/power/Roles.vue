@@ -140,7 +140,7 @@ export default {
     async setshowDialog(role) {
       // 将角色权限的id保存在数组中
       this.roleId = role.id
-      console.log(this.roleId)
+      // console.log(this.roleId)
       this.setrightsDialog = true
       // 获取权限列表
       const { data: res } = await this.$http.get('rights/tree')
@@ -173,7 +173,7 @@ export default {
       ]
       // console.log(keys)
       const idStr = keys.join(',')
-      console.log(idStr)
+      // console.log(idStr)
       const { data: res } = this.$http.post(`roles/${this.roleId}/rights`, { rids: idStr })
       if (res.meta.status !== 200) {
         return this.$message.error('更新权限失败！')
